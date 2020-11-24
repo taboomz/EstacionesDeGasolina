@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Estaciones de gasolina</string>
+    <string name="title_activity_mapa">Map</string>
+</resources>
