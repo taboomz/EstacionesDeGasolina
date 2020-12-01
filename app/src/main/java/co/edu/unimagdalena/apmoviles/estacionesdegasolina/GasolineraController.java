@@ -28,11 +28,11 @@ public class GasolineraController {
             valores.put(DefBD.col_latitud, g.getLatitud());
 
             long id = sql.insert(DefBD.tabla_gasolineras, null, valores);
-            Toast.makeText(c, "Encuesta registrada", Toast.LENGTH_LONG).show();
+            Toast.makeText(c, "¡Estación registrada!", Toast.LENGTH_LONG).show();
             sql.close();
         }
         catch(Exception ex){
-            Toast.makeText(c, "Error al agregar encuesta" + ex.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(c, "Error al agregar estación." + ex.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -57,7 +57,7 @@ public class GasolineraController {
             return cur;
         }
         catch (Exception ex){
-            Toast.makeText(c, "Error al consultar Gasolinera " + ex.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(c, "Error al consultar estación. " + ex.getMessage(), Toast.LENGTH_LONG).show();
             return null;
         }
     }

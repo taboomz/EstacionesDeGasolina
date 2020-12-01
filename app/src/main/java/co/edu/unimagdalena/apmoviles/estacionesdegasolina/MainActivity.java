@@ -16,14 +16,16 @@ public class MainActivity extends AppCompatActivity {
     GasolineraController gasolineraController;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         gasolinera = findViewById(R.id.edtGasolinera);
         empresa = findViewById(R.id.edtEmpresa);
         departamento= findViewById(R.id.edtDepartamento);
         municipio = findViewById(R.id.edtMunicipio);
-        longitud = findViewById(R.id.edtLongitud);
         latitud = findViewById(R.id.edtLatitud);
+        longitud = findViewById(R.id.edtLongitud);
         guardar = findViewById(R.id.btnAgregar);
         ver = findViewById(R.id.btnMapa);
         listar = findViewById(R.id.btnLista);
@@ -38,16 +40,16 @@ public class MainActivity extends AppCompatActivity {
                     g.setDepartamento(departamento.getText().toString());
                     g.setEmpresa(empresa.getText().toString());
                     g.setMunicipio(municipio.getText().toString());
-                    g.setLongitud(Double.parseDouble(longitud.getText().toString()));
                     g.setLatitud(Double.parseDouble(latitud.getText().toString()));
-                    limpiar();
+                    g.setLongitud(Double.parseDouble(longitud.getText().toString()));
+                    setBlank();
                     if(gasolineraController.buscarGasolinera(g.getId())){
-                        Toast.makeText(MainActivity.this, "La gasolinera ya esta registrada", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Estación de gasolina ya registrada.", Toast.LENGTH_SHORT).show();
                     }else{
                         gasolineraController.agregarGasolinera(g);
                     }
                 }else{
-                    Toast.makeText(MainActivity.this, "¡¡¡Rellene todos los campos!!!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Por favor rellenar los campos.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void limpiar() {
+    private void setBlank() {
         gasolinera.setText("");
         departamento.setText("");
         municipio.setText("");

@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Estaciones de gasolina</string>
     <string name="title_activity_mapa">Map</string>
+    <string name="registrar_estaciones">Registre estación de gasolina:</string>
+    <string name="coordenadas">Ubicación (coordenadas):</string>
+    <string name="agregar">Agregar estación</string>
+    <string name="mostrar">Mostrar estaciones</string>
+    <string name="mostrar_mapa">Mostrar ubicación de estaciones</string>
 </resources>
