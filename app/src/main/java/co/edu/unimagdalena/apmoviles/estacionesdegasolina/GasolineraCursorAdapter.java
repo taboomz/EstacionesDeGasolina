@@ -33,11 +33,11 @@ public class GasolineraCursorAdapter  extends CursorAdapter {
         String longitud = cursor.getString(5);
         String latitud = cursor.getString(6);
 
-        gas.setText("Gasolinera: " + gasolinera);
+        gas.setText("Estación de servicio: " + gasolinera);
         emp.setText("Empresa: " + empresa);
-        dep.setText("Depsrtamento del " + departamento);
-        mun.setText("Municiio del " + municipio);
-        ubi.setText("Ubicacion: " + "(" + longitud + ", "+ latitud + ")");
+        dep.setText("Departamento: " + departamento);
+        mun.setText("Municipio: " + municipio);
+        ubi.setText("Ubicacion (coordenadas): " + "(" + longitud + ", "+ latitud + ")");
 
     }
 }

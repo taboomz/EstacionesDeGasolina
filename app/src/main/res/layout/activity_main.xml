@@ -11,14 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="AGREGAR GASOLINERA"
+        android:text="@string/registrar_estaciones"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <EditText
         android:id="@+id/edtGasolinera"
-        android:layout_width="390dp"
+        android:layout_width="395dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
@@ -70,20 +70,10 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="8dp"
-        android:text="Ubicacion"
+        android:layout_marginBottom="16dp"
         android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/edtLongitud"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginRight="8dp"
-        android:ems="10"
-        android:hint="Longitud"
-        android:inputType="numberDecimal|numberSigned" />
+        android:textStyle="bold"
+        tools:text="@string/coordenadas" />
 
     <EditText
         android:id="@+id/edtLatitud"
@@ -96,6 +86,17 @@
         android:hint="Latitud"
         android:inputType="numberDecimal|numberSigned" />
 
+    <EditText
+        android:id="@+id/edtLongitud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Longitud"
+        android:inputType="numberDecimal|numberSigned" />
+
     <Button
         android:id="@+id/btnAgregar"
         android:layout_width="match_parent"
@@ -103,16 +104,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="8dp"
-        android:text="Agregar" />
-
-    <Button
-        android:id="@+id/btnMapa"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginRight="8dp"
-        android:text="Ver en mapa" />
+        android:text="@string/agregar" />
 
     <Button
         android:id="@+id/btnLista"
@@ -121,6 +113,15 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="2dp"
         android:layout_marginRight="8dp"
-        android:text="Listado" />
+        android:text="@string/mostrar" />
+
+    <Button
+        android:id="@+id/btnMapa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/mostrar_mapa" />
 
 </LinearLayout>
